@@ -1,0 +1,206 @@
+
+body {
+    overflow-x: hidden;
+}
+
+#mainhead{
+    display: flex;
+    flex-direction: row;
+  }
+
+.img1 {
+    margin-bottom: 0%;
+}
+
+#profile {
+    margin-right: 2%;
+}
+
+.sidebar {
+    margin-top: 0;
+    padding-top: 10%;
+    width: 70px;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding-left: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  /* .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  } */
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+
+  .cls {
+    display: flex;
+    margin-top: 1%;
+    margin-left: 4%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    /* font-smooth: auto; */
+    font-weight: 545;
+    /* line-height: 1.5;
+    color: #444; */
+  }
+  /* saver css */
+
+  .container {
+    margin-left: ;
+  }
+
+  .flex-container {
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .flex-container > figure {
+    /* background-color: #ffffff; */
+    /* height: 271px;
+    width: 242px; */
+    margin-left: 2%;
+    margin-top: 0%;
+    border-radius: 8px;
+    font-size: 20px;
+  }
+
+  @import "bourbon";
+  @import "neat";
+  *, *:before, *:after {
+    box-sizing: border-box;
+    outline: none;
+  }
+  html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-smooth: auto;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #444;
+  }
+  /* body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+  } */
+  figure {
+    position: relative;
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 262px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+  }
+  figure:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  figure:hover img {
+    transform: scale(1.25);
+  }
+  figure:hover figcaption {
+    bottom: 0;
+  }
+  figure h1 {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 1;
+  }
+  figure img {
+    height: 100%;
+    transition: 0.25s;
+  }
+  figure figcaption {
+    position: absolute;
+    bottom: -33%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    color: white;
+    line-height: 1;
+    transition: 0.25s;
+  }
+  figure figcaption h3 {
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+  }
+  figure figcaption p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  figure figcaption button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0;
+    padding: 10px 30px;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+  }
